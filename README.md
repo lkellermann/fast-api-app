@@ -4,8 +4,6 @@
 
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Usage](#usage)
-- [Contributing](../CONTRIBUTING.md)
 
 ## About <a name = "about"></a>
 
@@ -13,15 +11,28 @@ This project comes from Bitfumes crash course on FastAPI. You can find the cours
 
 ## Getting Started <a name = "getting_started"></a>
 
-#TODO
+To run this project you need to install all [`Python 3.8+`](https://www.python.org/downloads/) and all dependencies in `./app/requirements.txt`. Is recommended to test the application on a virtual environment.
+- [Creating virtual environments in Python](https://docs.python.org/3.8/library/venv.html)
+- [Installing packages with `requirements.txt` files](https://pip.pypa.io/en/stable/user_guide/)
 
-### Prerequisites
+After creating your virtual environment and installed all dependencies on it, run the following command:
+```shell
+cd app && uvicorn main: app --reload
+```
+In your browser, access `http://localhost:8000/docs`. You should land in the following screen:
 
-#TODO
+![landing page](./img/docs.png)
 
+To execute `POST` requests under `blogs`, you should first register user by clicking on the `POST` button under `users` and then in `Try out`:
+![register new user](./img/register-new-user.png)
 
-### Installing
-#TODO
-## Usage <a name = "usage"></a>
+Then you type the new `username`, following by it's `email` adress and `password`. Then click on `execute`.
+![register new user](./img/register-new-user-2.png)
 
-#TODO
+Now you should be able to login. Click on `Authorize` at the right upper corner. The following window should appear:
+![register new user](./img/login.png)
+
+You will get the following login if you provide the right credentials:
+![register new user](./img/login-ok.png)
+
+After this you should be able to run `DELETE`, `PUT` and `POST` requests.
